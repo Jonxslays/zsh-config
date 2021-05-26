@@ -5,7 +5,7 @@
 if [[ ! -d pkg/testing/zsh ]]; then
     echo ""
     echo "Extracting..."
-    tar -C ./pkg/testing -xzvf ./pkg/testing/zsh-bundle.tar.gz;
+    #tar -C ./pkg/testing -xzvf ./pkg/testing/zsh-bundle.tar.gz;
     echo "Done."
     echo "--------------------------"
 fi
