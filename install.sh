@@ -24,7 +24,7 @@ check_zsh_install() {
 }
 
 # Install zsh if not already installed
-while [[ check_zsh_install ]]; do
+while [[ ! check_zsh_install ]]; do
     echo ""
     echo "Installing ZSH"
     if [[ $OS == "Arch" ]]; then
@@ -56,22 +56,22 @@ echo ""
 echo "Moving resources to /usr/share/zsh*"
 if [[ -d /usr/share/zsh/ ]]; then
     echo "placeholder"
-    #sudo mv -v /usr/share/zsh{,.bak.$(date +%s)}
-    #sudo cp -v ./pkg/zsh /usr/share/zsh
+    sudo mv -v /usr/share/zsh{,.bak.$(date +%s)}
+    sudo cp -v ./pkg/zsh /usr/share/zsh
 else
     echo "placeholder"
-    #sudo cp -v ./pkg/zsh /usr/share/zsh
+    sudo cp -v ./pkg/zsh /usr/share/zsh
 fi
 
 echo "Current shell: $SHELL"
 if [[ -f ~/.zshrc ]]; then
     echo "Backing up ~/.zshrc"
-    #mv -v ~/.zshrctest{,.bak.$(date +%s)}
+    mv -v ~/.zshrctest{,.bak.$(date +%s)}
     echo "Creating new ~/.zshrc"
-    #cp -v ./pkg/.zshrctest ~/.zshrctest
+    cp -v ./pkg/.zshrctest ~/.zshrctest
 else
     echo "Creating new ~/.zshrc"
-    #cp -v ./pkg/.zshrctest ~/.zshrctest
+    cp -v ./pkg/.zshrctest ~/.zshrctest
 fi
 
 echo "Complete."
