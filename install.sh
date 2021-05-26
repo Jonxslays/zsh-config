@@ -41,7 +41,7 @@ while [[ check_zsh_install ]]; do
         sudo yum install zsh
     else
         echo ""
-        echo "Unable to detmine package manager."
+        echo "Unable to determine package manager."
         echo "Please install ZSH manually."
         echo "Continuing with additional tasks."
         break
