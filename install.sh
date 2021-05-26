@@ -11,7 +11,7 @@ if [[ ! -d pkg/testing/zsh ]]; then
 fi
 
 # Pulls linux distro info
-. ./distro.sh
+. ./pkg/distro.sh
 
 # Checks if zsh is installed
 check_zsh_install() {
