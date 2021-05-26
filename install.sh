@@ -46,10 +46,6 @@ while [[ ! check_zsh_install ]]; do
         echo "Continuing with additional tasks."
         break
     fi
-
-    if [[ check_zsh_install ]]; then
-        break
-    fi
 done
 
 echo ""
